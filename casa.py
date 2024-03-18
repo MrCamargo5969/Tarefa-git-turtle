@@ -1,0 +1,123 @@
+import turtle
+# Codigo principal
+def main():
+    screen = turtle.Screen()
+    screen.setup(width=500, height=500)
+    screen.bgcolor("skyblue")
+    t = turtle.Turtle()
+    t.speed(10)
+    corpo(t)
+    teto(t)
+    porta(t)
+    janela(t)
+    chao(t)
+    caminho(t)
+    t.penup()
+    t.goto(-250, 250)
+    t.pendown()
+    turtle.done()
+
+# Desenhar o quadrilatero corpo da casa
+def corpo(t):
+    t.fillcolor("#D0D300")
+    t.begin_fill()
+    t.forward(200)  # Linha inferior
+    t.left(90)
+    t.forward(150)  # Lateral esquerda
+    t.left(90)
+    t.forward(200)  # Linha superior
+    t.left(90)
+    t.forward(150)  # Linha inferior
+    t.end_fill()
+
+# Desenha o triangulo que faz o telhado da casa
+def teto(t):
+    t.fillcolor("#B60C00")
+    t.begin_fill()
+    t.penup()
+    t.goto(0, 150)
+    t.pendown()
+    t.left(120)
+    t.forward(115.4)
+    t.right(60)
+    t.forward(115.4)
+    t.right(150)
+    t.forward(200)
+    t.end_fill()
+
+# desenhar porta
+def porta(t):
+    t.fillcolor("#8E774E")
+    t.begin_fill()
+    t.penup()
+    t.goto(25, 0)
+    t.pendown()
+    t.left(180)
+    t.forward(50)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(50)
+    t.left(90)
+    t.forward(100)
+    t.end_fill()
+
+# Desenhar uma janela
+def janela(t):
+    t.fillcolor("#878700")
+    t.begin_fill()
+    t.penup()
+    t.goto(100, 50)
+    t.pendown()
+    t.left(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(75)
+    t.end_fill()
+    t.penup()
+    t.goto(100, 87.5)
+    t.pendown()
+    t.left(90)
+    t.forward(75)
+    t.penup()
+    t.goto(137.5, 125)
+    t.pendown()
+    t.right(90)
+    t.forward(75)
+    
+def chao(t):
+    t.fillcolor("#267F00")
+    t.begin_fill()
+    t.penup()
+    t.goto(-250, 0)
+    t.pendown()
+    t.left(90)
+    t.forward(500)
+    t.right(90)
+    t.forward(250)
+    t.right(90)
+    t.forward(500)
+    t.right(90)
+    t.forward(250)
+    t.end_fill()
+
+def caminho(t):
+    t.fillcolor("#915E00")
+    t.begin_fill()
+    t.penup()
+    t.goto(25, 0)
+    t.pendown()
+    t.left(135)
+    t.forward(371.7)
+    t.left(135)
+    t.forward(130)
+    t.left(55)
+    t.forward(320)
+    t.left(125)
+    t.forward(50)
+    t.end_fill()
+main()
