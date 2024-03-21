@@ -8,7 +8,7 @@ def main():
     turtle.title("Casa do João")
     t = turtle.Turtle()
     t.shape("circle")
-    t.speed(100)
+    t.speed(0)
     draw_gradient(t)
     lua(t)
     estrela2(t)
@@ -22,6 +22,7 @@ def main():
     caminho(t)
     avre(t)
     tronco(t)
+    
     t.hideturtle()
     turtle.done()
 
@@ -299,4 +300,5 @@ def macaneta(t):
     t.begin_fill()
     t.circle(5)
     t.end_fill()
+
 main()
